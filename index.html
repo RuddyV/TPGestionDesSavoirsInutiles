@@ -1,22 +1,41 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="index.js"></script>
-    <title>Document</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- Je créé le lien avec le fichier js et css -->
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/exercice.js"></script>
+    <title>Exercice 2</title>
 </head>
 <body>
-    <label for="savoir">Savoir : </label><input type="text" name="savoir" id="savoir">
-    <label for="auteur"></label>Auteur : <input type="text" name="saisie" id="auteur">
-    <label for="date"></label>Date : <input type="date" name="date" id="date">
-    <button type="button" onclick="add_ol();">envoyer la submit</button>
-    <ol id="list">
+    <!-- Créer mes inputs -->
+    <div>
+        <label for="savoirInput">Savoir :</label>
+        <input type="text" name="savoir" id="savoirInput">
+    </div>
+    <div>
+        <label for="auteurInput">Auteur :</label>
+        <input type="text" name="auteur" id="auteurInput">
+    </div>
+    <div>
+        <label for="dateInput">Date :</label>
+        <input type="date" name="date" id="dateInput">
+    </div>
+    <!-- créer mon bouton avec onclick pour lancer la fonction au clique -->
+    <div>
+        <button onclick="ajouterInput()">Ajouter</button>
+    </div>
+    <!-- Je créé une div avec un ol et son id pour positionner et afficher mes saisies -->
+    <div>
+        <ol id="olListeSavoir">
 
-    </ol>
-
-
+        </ol>
+    </div>
+    
 </body>
 </html>
+<!-- Quand la page est chargée je lance la fonction chargementTermine()
+qui me permettra de faire un focus et d'ajouter la date du jour selection -->
+<script>chargementTermine();</script>
